@@ -1,9 +1,9 @@
-// src/App.js
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -23,7 +23,15 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "skills", "projects", "contact"];
+      // ACTUALIZA ESTE ARRAY CON TODAS LAS SECCIONES INCLUYENDO EXPERIENCE
+      const sections = [
+        "home",
+        "about",
+        "skills",
+        "experience",
+        "projects",
+        "contact",
+      ];
       const scrollY = window.pageYOffset;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -50,6 +58,8 @@ function App() {
       <Hero scrollToSection={scrollToSection} />
       <About />
       <Skills />
+      <Experience />{" "}
+      {/* Asegúrate de que este componente esté importado y tenga id="experience" */}
       <Projects />
       <Contact />
       <Footer />
