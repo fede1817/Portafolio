@@ -19,20 +19,6 @@ const Skills = () => {
     { name: 'Python', icon: 'fab fa-python', level: 75, color: 'green' },
     { name: 'HTML/CSS', icon: 'fab fa-html5', level: 95, color: 'accent' }
   ];
-
-  const getColorClass = (color) => {
-    const colors = {
-      primary: 'bg-primary',
-      accent: 'bg-accent',
-      cyan: 'bg-cyan-400',
-      blue: 'bg-blue-500',
-      green: 'bg-green-500',
-      indigo: 'bg-indigo-500',
-      purple: 'bg-purple-500'
-    };
-    return colors[color] || 'bg-primary';
-  };
-
   const getGradientClass = (color) => {
     const gradients = {
       primary: 'from-primary to-primary',
@@ -74,12 +60,11 @@ const Skills = () => {
                 <div className="w-full bg-gray-700 rounded-full h-3 mb-2">
                   <div
                     className={`h-3 rounded-full bg-gradient-to-r ${getGradientClass(skill.color)} transition-all duration-1000`}
-                    style={{ width: `${skill.level}%` }}
+                   
                   ></div>
                 </div>
                 
                 <span className="text-gray-300 font-semibold">
-                  {skill.level}%
                 </span>
               </div>
             </div>

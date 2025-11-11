@@ -94,18 +94,6 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Social Links */}
-            <div className="flex gap-4 mt-8">
-              {['github', 'linkedin', 'twitter', 'instagram'].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors border border-gray-700"
-                >
-                  <i className={`fab fa-${social} text-white`}></i>
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Contact Form */}

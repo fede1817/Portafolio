@@ -7,17 +7,17 @@ const Projects = () => {
   const projects = [
     {
       title: 'RICOH PRINTER MANAGER DEMO',
-      description: 'Plataforma completa de comercio electrónico con carrito, checkout y panel administrativo.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+      description: 'RINTER MANAGER es una aplicación desarrollada con React (frontend) y Node.js (backend) que permite monitorear y administrar impresoras en red. El sistema utiliza la API SNMP para obtener información en tiempo real sobre los niveles de tóner, detectar cambios de cartuchos, y mantener un contador de tóneres de reserva. Además, el programa realiza comprobaciones de conectividad mediante ping para mostrar el estado de red de cada impresora.',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'API SNMP'],
       image: <BsFillPrinterFill />,
       github: 'https://github.com/fede1817/RICOH-PRINTER-MANAGER-demo-',
       demo: 'https://ricoh-printer-manager-demo.vercel.app/',
       featured: true
     },
     {
-      title: 'App Móvil de Tareas',
+      title: 'VALIDADOR DE CENSO',
       description: 'Aplicación de productividad con sincronización en tiempo real y notificaciones push.',
-      technologies: ['React Native', 'Firebase', 'Redux'],
+      technologies: ['React', 'API REST'],
       image: <FaPersonCirclePlus />,
       github: 'https://github.com/fede1817/VALIDADOR-DE-CENSO',
       demo: 'https://validador-de-censo.vercel.app/',
