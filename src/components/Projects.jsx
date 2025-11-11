@@ -1,23 +1,26 @@
 import React from 'react';
+import { BsFillPrinterFill } from "react-icons/bs";
+import { FaPersonCirclePlus } from "react-icons/fa6";
+
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-commerce React',
+      title: 'RICOH PRINTER MANAGER DEMO',
       description: 'Plataforma completa de comercio electrónico con carrito, checkout y panel administrativo.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      image: '🛒',
-      github: '#',
-      demo: '#',
+      image: <BsFillPrinterFill />,
+      github: 'https://github.com/fede1817/RICOH-PRINTER-MANAGER-demo-',
+      demo: 'https://ricoh-printer-manager-demo.vercel.app/',
       featured: true
     },
     {
       title: 'App Móvil de Tareas',
       description: 'Aplicación de productividad con sincronización en tiempo real y notificaciones push.',
       technologies: ['React Native', 'Firebase', 'Redux'],
-      image: '📱',
-      github: '#',
-      demo: '#',
+      image: <FaPersonCirclePlus />,
+      github: 'https://github.com/fede1817/VALIDADOR-DE-CENSO',
+      demo: 'https://validador-de-censo.vercel.app/',
       featured: true
     },
     {
