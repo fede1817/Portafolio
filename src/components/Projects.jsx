@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: 'RICOH PRINTER MANAGER DEMO',
       description: 'RINTER MANAGER es una aplicación desarrollada con React (frontend) y Node.js (backend) que permite monitorear y administrar impresoras en red. El sistema utiliza la API SNMP para obtener información en tiempo real sobre los niveles de tóner, detectar cambios de cartuchos, y mantener un contador de tóneres de reserva. Además, el programa realiza comprobaciones de conectividad mediante ping para mostrar el estado de red de cada impresora.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'API SNMP'],
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'API SNMP','CSS'],
       image: <BsFillPrinterFill />,
       github: 'https://github.com/fede1817/RICOH-PRINTER-MANAGER-demo-',
       demo: 'https://ricoh-printer-manager-demo.vercel.app/',
@@ -16,20 +16,20 @@ const Projects = () => {
     },
     {
       title: 'VALIDADOR DE CENSO',
-      description: 'Aplicación de productividad con sincronización en tiempo real y notificaciones push.',
-      technologies: ['React', 'API REST'],
+      description: 'Sistema de validación y carga de datos comerciales que asegura la calidad y consistencia de la información de clientes antes de integrarla al ERP corporativo.',
+      technologies: ['React', 'API REST','CSS'],
       image: <FaPersonCirclePlus />,
       github: 'https://github.com/fede1817/VALIDADOR-DE-CENSO',
       demo: 'https://validador-de-censo.vercel.app/',
       featured: true
     },
     {
-      title: 'Dashboard Analytics',
-      description: 'Panel de control con métricas en tiempo real, gráficos interactivos y reportes automáticos.',
-      technologies: ['React', 'Python', 'PostgreSQL', 'Chart.js'],
+      title: 'SISTEMA DE RASTREO DE TELEFONOS CORPORATIVOS',
+      description: 'Aplicación web para monitoreo en tiempo real de dispositivos móviles de una empresa, mostrando su ubicación, estado y datos técnicos.',
+      technologies: ['React + Vite', 'API REST', 'tailwindcss'],
       image: '📊',
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/fede1817/CELL-MANAGER',
+      demo: 'https://cell-manager-iota.vercel.app/',
       featured: false
     },
     {
