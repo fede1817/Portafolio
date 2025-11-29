@@ -77,30 +77,89 @@ const Contact = () => {
       );
   };
 
+  const handlePhoneClick = () => {
+    // Copiar número al portapapeles
+    navigator.clipboard
+      .writeText("0976530067")
+      .then(() => {
+        Swal.fire({
+          title: "¡Número copiado!",
+          text: "El número 0976530067 ha sido copiado al portapapeles",
+          icon: "success",
+          background: "#1f2937",
+          color: "#fff",
+          confirmButtonColor: "#3b82f6",
+          confirmButtonText: "¡Genial!",
+          timer: 3000,
+          customClass: {
+            popup: "sweet-alert-dark",
+            title: "sweet-alert-title",
+            confirmButton: "sweet-alert-button",
+          },
+        });
+      })
+      .catch(() => {
+        // Fallback si no funciona clipboard
+        Swal.fire({
+          title: "Número de teléfono",
+          html: `
+            <p class="text-gray-300 mb-4">Mi número de teléfono:</p>
+            <p class="text-xl font-bold text-primary">+595 981 555555</p>
+            <p class="text-sm text-gray-400 mt-2">(Paraguay)</p>
+          `,
+          background: "#1f2937",
+          color: "#fff",
+          confirmButtonColor: "#3b82f6",
+          confirmButtonText: "Cerrar",
+          customClass: {
+            popup: "sweet-alert-dark",
+            title: "sweet-alert-title",
+            confirmButton: "sweet-alert-button",
+          },
+        });
+      });
+  };
+
   const contactMethods = [
+    {
+      icon: "fas fa-phone-alt",
+      title: "Teléfono",
+      value: "0976530067",
+      link: null,
+      action: handlePhoneClick,
+      copyable: true,
+    },
     {
       icon: "fas fa-envelope",
       title: "Email",
       value: "frayg52@gmail.com",
       link: "mailto:frayg52@gmail.com",
+      action: null,
+      copyable: false,
     },
     {
       icon: "fab fa-github",
       title: "GitHub",
       value: "github.com/fede1817",
       link: "https://github.com/fede1817",
+      action: null,
+      copyable: false,
     },
     {
       icon: "fab fa-linkedin",
       title: "LinkedIn",
       value: "linkedin.com/in/tuusuario",
       link: "https://linkedin.com/in/tuusuario",
+      action: null,
+      copyable: false,
     },
     {
       icon: "fas fa-map-marker-alt",
       title: "Ubicación",
       value: "Asunción, Paraguay",
       link: null,
+      action: null,
+      copyable: false,
     },
   ];
 
@@ -129,7 +188,7 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
                     <i className={`${method.icon} text-white`}></i>
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-lg text-white">
                       {method.title}
                     </h4>
@@ -138,10 +197,21 @@ const Contact = () => {
                         href={method.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-300 hover:text-white transition-colors"
+                        className="text-gray-300 hover:text-white transition-colors flex items-center gap-2"
                       >
                         {method.value}
+                        <i className="fas fa-external-link-alt text-xs"></i>
                       </a>
+                    ) : method.action ? (
+                      <button
+                        onClick={method.action}
+                        className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
+                      >
+                        {method.value}
+                        {method.copyable && (
+                          <i className="fas fa-copy text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        )}
+                      </button>
                     ) : (
                       <p className="text-gray-300">{method.value}</p>
                     )}
