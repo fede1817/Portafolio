@@ -31,7 +31,7 @@ const Experience = () => {
     },
     {
       id: 2,
-      title: "Soporte tecnico IT",
+      title: "Soporte IT",
       company: "COMPU-LYSEIS",
       period: "2021 - 2023",
       description: [
