@@ -5,7 +5,7 @@ const Experience = () => {
     {
       id: 1,
       title: "Analista IT",
-      company: "Surcomercial",
+      company: "Sur Comercial - Cavallaro S.A.C.E.I.",
       period: "2024 - Presente",
       description: [
         "Desarrollo de aplicaciones web con React y React Native",
