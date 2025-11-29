@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const About = () => {
   const stats = [
-    { number: '10+', label: 'Proyectos Completados' },
-    { number: '3+', label: 'Años de Experiencia' },
-    { number: '8+', label: 'Tecnologías' },
-    { number: '5+', label: 'Clientes Satisfechos' }
+    { number: "3+", label: "Años de Experiencia" },
+    { number: "8+", label: "Tecnologías" },
   ];
 
   return (
@@ -33,19 +31,24 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-gray-300 text-lg">
               <p>
-                Soy un desarrollador full stack con especialización en <strong className="text-primary">React, React Native</strong> 
-                y amplia experiencia en <strong className="text-accent">sistemas SAP y ERP</strong>. Combino el desarrollo moderno 
-                de aplicaciones con soluciones empresariales robustas.
+                Soy un desarrollador JR con especialización en{" "}
+                <strong className="text-primary">React, React Native</strong> y
+                amplia experiencia en{" "}
+                <strong className="text-accent">sistemas SAP y ERP</strong>.
+                Combino el desarrollo moderno de aplicaciones con soluciones
+                empresariales robustas.
               </p>
               <p>
-                Mi expertise incluye la integración de aplicaciones web/móviles con sistemas SAP, 
-                desarrollo de interfaces personalizadas y optimización de procesos empresariales 
-                mediante soluciones tecnológicas innovadoras.
+                Mi expertise incluye la integración de aplicaciones web/móviles
+                con sistemas SAP, desarrollo de interfaces personalizadas y
+                optimización de procesos empresariales mediante soluciones
+                tecnológicas innovadoras.
               </p>
               <p>
-                Me apasiona transformar necesidades complejas en soluciones intuitivas y funcionales, 
-                siempre enfocado en la experiencia del usuario y las mejores prácticas tanto en desarrollo 
-                como en implementación de sistemas empresariales.
+                Me apasiona transformar necesidades complejas en soluciones
+                intuitivas y funcionales, siempre enfocado en la experiencia del
+                usuario y las mejores prácticas tanto en desarrollo como en
+                implementación de sistemas empresariales.
               </p>
             </div>
 
@@ -56,9 +59,7 @@ const About = () => {
                   <div className="text-3xl font-bold gradient-text mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-300 font-medium">
-                    {stat.label}
-                  </div>
+                  <div className="text-gray-300 font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -72,27 +73,36 @@ const About = () => {
               <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-code text-white text-2xl"></i>
               </div>
-              <h4 className="text-xl font-bold text-white mb-3">Desarrollo Full Stack</h4>
+              <h4 className="text-xl font-bold text-white mb-3">
+                Desarrollo Full Stack
+              </h4>
               <p className="text-gray-300">
-                React, React Native, Node.js, APIs REST y bases de datos modernas
+                React, React Native, Node.js, APIs REST y bases de datos
+                modernas
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-cogs text-white text-2xl"></i>
               </div>
-              <h4 className="text-xl font-bold text-white mb-3">Sistemas SAP & ERP</h4>
+              <h4 className="text-xl font-bold text-white mb-3">
+                Sistemas SAP & ERP
+              </h4>
               <p className="text-gray-300">
-                Consultoría, implementación e integración de sistemas empresariales
+                Consultoría, implementación e integración de sistemas
+                empresariales
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-rocket text-white text-2xl"></i>
               </div>
-              <h4 className="text-xl font-bold text-white mb-3">Soluciones Integrales</h4>
+              <h4 className="text-xl font-bold text-white mb-3">
+                Soluciones Integrales
+              </h4>
               <p className="text-gray-300">
-                Combinación de desarrollo ágil con soluciones empresariales robustas
+                Combinación de desarrollo ágil con soluciones empresariales
+                robustas
               </p>
             </div>
           </div>

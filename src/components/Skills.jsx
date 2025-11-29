@@ -1,35 +1,52 @@
-import React from 'react';
+import React from "react";
 
 const Skills = () => {
   const skills = [
     // Tecnologías de desarrollo
-    { name: 'JavaScript', icon: 'fab fa-js', level: 90, color: 'primary' },
-    { name: 'React', icon: 'fab fa-react', level: 85, color: 'cyan' },
-    { name: 'React Native', icon: 'fas fa-mobile-alt', level: 80, color: 'blue' },
-    { name: 'Node.js', icon: 'fab fa-node-js', level: 75, color: 'green' },
-    
+    { name: "JavaScript", icon: "fab fa-js", level: 90, color: "primary" },
+    { name: "React", icon: "fab fa-react", level: 85, color: "cyan" },
+    {
+      name: "React Native",
+      icon: "fas fa-mobile-alt",
+      level: 80,
+      color: "blue",
+    },
+    { name: "Node.js", icon: "fab fa-node-js", level: 75, color: "green" },
+
     // SAP & ERP
-    { name: 'SAP', icon: 'fas fa-cogs', level: 80, color: 'accent' },
-    { name: 'Sistemas ERP', icon: 'fas fa-network-wired', level: 85, color: 'purple' },
-    { name: 'Integración API', icon: 'fas fa-plug', level: 80, color: 'indigo' },
-    
+    { name: "SAP", icon: "fas fa-cogs", level: 80, color: "accent" },
+    {
+      name: "Sistemas ERP",
+      icon: "fas fa-network-wired",
+      level: 85,
+      color: "purple",
+    },
+    {
+      name: "Integración API",
+      icon: "fas fa-plug",
+      level: 80,
+      color: "indigo",
+    },
+
     // Bases de datos y herramientas
-    { name: 'PostgreSQL', icon: 'fas fa-database', level: 70, color: 'blue' },
-    { name: 'Git/GitHub', icon: 'fab fa-git-alt', level: 85, color: 'primary' },
-    { name: 'Python', icon: 'fab fa-python', level: 75, color: 'green' },
-    { name: 'HTML/CSS', icon: 'fab fa-html5', level: 95, color: 'accent' }
+    { name: "PostgreSQL", icon: "fas fa-database", level: 70, color: "blue" },
+    { name: "Git/GitHub", icon: "fab fa-git-alt", level: 85, color: "primary" },
+    { name: "Python", icon: "fab fa-python", level: 75, color: "green" },
+    { name: "HTML/CSS", icon: "fab fa-html5", level: 95, color: "accent" },
+    { name: "Power BI", icon: "fas fa-chart-bar", level: 95, color: "yellow" },
   ];
   const getGradientClass = (color) => {
     const gradients = {
-      primary: 'from-primary to-primary',
-      accent: 'from-accent to-accent',
-      cyan: 'from-cyan-400 to-cyan-500',
-      blue: 'from-blue-500 to-blue-600',
-      green: 'from-green-500 to-green-600',
-      indigo: 'from-indigo-500 to-indigo-600',
-      purple: 'from-purple-500 to-purple-600'
+      primary: "from-primary to-primary",
+      accent: "from-accent to-accent",
+      cyan: "from-cyan-400 to-cyan-500",
+      blue: "from-blue-500 to-blue-600",
+      green: "from-green-500 to-green-600",
+      indigo: "from-indigo-500 to-indigo-600",
+      purple: "from-purple-500 to-purple-600",
+      yellow: "from-yellow-500 to-yellow-600",
     };
-    return gradients[color] || 'from-primary to-accent';
+    return gradients[color] || "from-primary to-accent";
   };
 
   return (
@@ -39,7 +56,8 @@ const Skills = () => {
           Mis <span className="gradient-text">Habilidades</span>
         </h2>
         <p className="text-gray-400 text-center text-lg mb-16 max-w-2xl mx-auto">
-          Tecnologías y herramientas que domino para crear soluciones innovadoras
+          Tecnologías y herramientas que domino para crear soluciones
+          innovadoras
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -49,23 +67,27 @@ const Skills = () => {
               className="bg-gray-800 rounded-2xl p-6 shadow-2xl card-hover border border-gray-700"
             >
               <div className="text-center">
-                <div className={`w-16 h-16 bg-gradient-to-br ${getGradientClass(skill.color)} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                <div
+                  className={`w-16 h-16 bg-gradient-to-br ${getGradientClass(
+                    skill.color
+                  )} rounded-2xl flex items-center justify-center mx-auto mb-4`}
+                >
                   <i className={`${skill.icon} text-white text-2xl`}></i>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">
                   {skill.name}
                 </h3>
-                
+
                 {/* Progress Bar */}
                 <div className="w-full bg-gray-700 rounded-full h-3 mb-2">
                   <div
-                    className={`h-3 rounded-full bg-gradient-to-r ${getGradientClass(skill.color)} transition-all duration-1000`}
-                   
+                    className={`h-3 rounded-full bg-gradient-to-r ${getGradientClass(
+                      skill.color
+                    )} transition-all duration-1000`}
                   ></div>
                 </div>
-                
-                <span className="text-gray-300 font-semibold">
-                </span>
+
+                <span className="text-gray-300 font-semibold"></span>
               </div>
             </div>
           ))}
@@ -78,9 +100,10 @@ const Skills = () => {
               Desarrollo Moderno + Soluciones Empresariales
             </h3>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Combino el desarrollo de aplicaciones modernas con React y React Native 
-              con experiencia en sistemas SAP y ERP, ofreciendo soluciones integrales 
-              que conectan interfaces de usuario intuitivas con sistemas empresariales robustos.
+              Combino el desarrollo de aplicaciones modernas con React y React
+              Native con experiencia en sistemas SAP y ERP, ofreciendo
+              soluciones integrales que conectan interfaces de usuario
+              intuitivas con sistemas empresariales robustos.
             </p>
           </div>
         </div>
@@ -99,14 +122,18 @@ const Skills = () => {
               <i className="fas fa-server text-white text-xl"></i>
             </div>
             <h4 className="text-lg font-bold text-white mb-2">Backend</h4>
-            <p className="text-gray-300">Node.js, Python, APIs, Bases de datos</p>
+            <p className="text-gray-300">
+              Node.js, Python, APIs, Bases de datos
+            </p>
           </div>
           <div className="text-center p-6 bg-gray-800 rounded-2xl border border-gray-700">
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
               <i className="fas fa-cogs text-white text-xl"></i>
             </div>
             <h4 className="text-lg font-bold text-white mb-2">ERP & SAP</h4>
-            <p className="text-gray-300">Sistemas empresariales e integración</p>
+            <p className="text-gray-300">
+              Sistemas empresariales e integración
+            </p>
           </div>
         </div>
       </div>

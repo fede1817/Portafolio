@@ -1,67 +1,82 @@
-import React from 'react';
+import React from "react";
 
 const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "Desarrollador Full Stack & Consultor SAP",
-      company: "Empresa Actual",
-      period: "2023 - Presente",
+      title: "Analista IT",
+      company: "Surcomercial",
+      period: "2024 - Presente",
       description: [
         "Desarrollo de aplicaciones web con React y React Native",
         "Integración de sistemas con SAP y soluciones ERP",
         "Optimización de procesos empresariales mediante soluciones tecnológicas",
-        "Consultoría en implementación de módulos SAP"
+        "Consultoría en implementación de módulos SAP",
+        "Implementación de APIs REST para integración con sistemas existentes",
+        "Soporte al usuario final",
+        "Help desk a travez de tickets",
+        "Modificaciones de cartera de cliente, vendedores, gestion de invetario entre otros procesos a travez de SAP",
+        "Reportes BI",
       ],
-      technologies: ["React", "React Native", "SAP", "Node.js", "PostgreSQL"],
-      type: "current"
+      technologies: [
+        "GLPI",
+        "React",
+        "React Native",
+        "SAP",
+        "Node.js",
+        "PostgreSQL",
+        "GIT",
+      ],
+      type: "current",
     },
     {
       id: 2,
-      title: "Desarrollador Full Stack",
-      company: "Empresa Anterior",
+      title: "Soporte tecnico IT",
+      company: "COMPU-LYSEIS",
       period: "2021 - 2023",
       description: [
-        "Desarrollo de aplicaciones empresariales con React y Node.js",
-        "Implementación de APIs REST para integración con sistemas existentes",
-        "Colaboración en migración de sistemas legacy a soluciones modernas",
-        "Capacitación a equipos en nuevas tecnologías"
+        "Soporte al usuario final",
+        "Administracion de dominios",
+        "Help Desk a travez de tickets",
+        "Capacitación a equipos en nuevas tecnologías",
+        "Manteniemiento de equipos informaticos",
+        "Mantenimiento de redes empresariales",
+        "Gestion de inventario",
       ],
-      technologies: ["React", "Node.js", "Python", "MongoDB", "Docker"],
-      type: "previous"
+      technologies: [
+        "UVdesk",
+        "Windows Server Active Directory",
+        "OCS iventory",
+        "Linux",
+        "Phyton",
+        "Django",
+      ],
+      type: "previous",
     },
     {
       id: 3,
-      title: "Desarrollador Frontend",
-      company: "Startup Tecnológica",
-      period: "2020 - 2021",
+      title: "Soporte IT",
+      company: "LEZ NETWORK",
+      period: "2019 - 2021",
       description: [
-        "Desarrollo de interfaces de usuario con React",
-        "Implementación de diseño responsive y accesible",
-        "Colaboración con equipo de diseño para mejorar UX/UI",
-        "Optimización de performance de aplicaciones web"
+        "Soporte al usuario final",
+        "Administracion de usuarios de dominios",
+        "Help Desk a travez de tickets",
+        "Manteniemiento de equipos informaticos",
+        "Gestion de inventario",
       ],
-      technologies: ["React", "JavaScript", "CSS3", "Redux", "Git"],
-      type: "previous"
+      technologies: [
+        "Faveo Helpdesk",
+        "Windows Server Active Directory",
+        "Oficce",
+        "Meet",
+      ],
+      type: "previous",
     },
-    {
-      id: 4,
-      title: "Practicante de Desarrollo",
-      company: "Universidad / Empresa",
-      period: "2019 - 2020",
-      description: [
-        "Introducción al desarrollo web y móvil",
-        "Apoyo en proyectos de desarrollo interno",
-        "Aprendizaje de metodologías ágiles",
-        "Desarrollo de habilidades en JavaScript y frameworks modernos"
-      ],
-      technologies: ["JavaScript", "HTML5", "CSS3", "React", "Git"],
-      type: "previous"
-    }
   ];
 
   const getTimelinePosition = (index) => {
-    return index % 2 === 0 ? 'left' : 'right';
+    return index % 2 === 0 ? "left" : "right";
   };
 
   return (
@@ -71,7 +86,8 @@ const Experience = () => {
           Experiencia <span className="gradient-text">Laboral</span>
         </h2>
         <p className="text-gray-400 text-center text-lg mb-16 max-w-2xl mx-auto">
-          Mi trayectoria profesional combinando desarrollo tecnológico con soluciones empresariales
+          Mi trayectoria profesional combinando desarrollo tecnológico con
+          soluciones empresariales
         </p>
 
         <div className="relative">
@@ -84,21 +100,29 @@ const Experience = () => {
               <div
                 key={experience.id}
                 className={`relative flex flex-col md:flex-row ${
-                  getTimelinePosition(index) === 'left' ? 'md:flex-row-reverse' : ''
+                  getTimelinePosition(index) === "left"
+                    ? "md:flex-row-reverse"
+                    : ""
                 } items-center`}
               >
                 {/* Punto en la línea */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-gray-900 z-10 hidden md:block"></div>
 
                 {/* Contenido */}
-                <div className={`md:w-1/2 ${
-                  getTimelinePosition(index) === 'left' ? 'md:pr-12' : 'md:pl-12'
-                } mb-8 md:mb-0`}>
-                  <div className={`bg-gray-800 rounded-2xl p-8 shadow-2xl card-hover border border-gray-700 ${
-                    experience.type === 'current' ? 'ring-2 ring-primary' : ''
-                  }`}>
+                <div
+                  className={`md:w-1/2 ${
+                    getTimelinePosition(index) === "left"
+                      ? "md:pr-12"
+                      : "md:pl-12"
+                  } mb-8 md:mb-0`}
+                >
+                  <div
+                    className={`bg-gray-800 rounded-2xl p-8 shadow-2xl card-hover border border-gray-700 ${
+                      experience.type === "current" ? "ring-2 ring-primary" : ""
+                    }`}
+                  >
                     {/* Badge de trabajo actual */}
-                    {experience.type === 'current' && (
+                    {experience.type === "current" && (
                       <span className="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
                         Trabajo Actual
                       </span>
@@ -121,7 +145,10 @@ const Experience = () => {
                     {/* Descripción */}
                     <ul className="space-y-2 mb-6">
                       {experience.description.map((item, idx) => (
-                        <li key={idx} className="flex items-start text-gray-300">
+                        <li
+                          key={idx}
+                          className="flex items-start text-gray-300"
+                        >
                           <i className="fas fa-check text-accent mt-1 mr-3 text-sm"></i>
                           <span>{item}</span>
                         </li>
@@ -150,36 +177,6 @@ const Experience = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Sección adicional de logros */}
-        <div className="mt-20 bg-gray-800 rounded-2xl p-8 border border-gray-700">
-          <h3 className="text-2xl font-bold text-center text-white mb-8">
-            Logros Destacados
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-rocket text-white text-2xl"></i>
-              </div>
-              <h4 className="text-lg font-semibold text-white mb-2">+15 Proyectos</h4>
-              <p className="text-gray-400">Entregados exitosamente</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-users text-white text-2xl"></i>
-              </div>
-              <h4 className="text-lg font-semibold text-white mb-2">+10 Clientes</h4>
-              <p className="text-gray-400">Satisfechos con mis soluciones</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-chart-line text-white text-2xl"></i>
-              </div>
-              <h4 className="text-lg font-semibold text-white mb-2">40% Optimización</h4>
-              <p className="text-gray-400">En procesos empresariales</p>
-            </div>
           </div>
         </div>
       </div>

@@ -1,46 +1,38 @@
-import React from 'react';
-import { BsFillPrinterFill } from "react-icons/bs";
-import { FaPersonCirclePlus } from "react-icons/fa6";
-
+import React from "react";
 
 const Projects = () => {
   const projects = [
     {
-      title: 'RICOH PRINTER MANAGER DEMO',
-      description: 'RINTER MANAGER es una aplicación desarrollada con React (frontend) y Node.js (backend) que permite monitorear y administrar impresoras en red. El sistema utiliza la API SNMP para obtener información en tiempo real sobre los niveles de tóner, detectar cambios de cartuchos, y mantener un contador de tóneres de reserva. Además, el programa realiza comprobaciones de conectividad mediante ping para mostrar el estado de red de cada impresora.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'API SNMP','CSS'],
-      image: <BsFillPrinterFill />,
-      github: 'https://github.com/fede1817/RICOH-PRINTER-MANAGER-demo-',
-      demo: 'https://ricoh-printer-manager-demo.vercel.app/',
-      featured: true
+      title: "RICOH PRINTER MANAGER DEMO + GESTION DE SERVIDORES",
+      description:
+        "RINTER MANAGER es una aplicación desarrollada con React (frontend) y Node.js (backend) que permite monitorear y administrar impresoras en red. El sistema utiliza la API SNMP para obtener información en tiempo real sobre los niveles de tóner, detectar cambios de cartuchos, y mantener un contador de tóneres de reserva. Además, el programa realiza comprobaciones de conectividad mediante ping para mostrar el estado de red de cada impresora.",
+      technologies: ["React", "Node.js", "PostgreSQL", "API SNMP", "CSS"],
+      thumbnail: "/images/projects/ricoh-printer-thumb.jpg", // Miniatura
+      github: "https://github.com/fede1817/RICOH-PRINTER-MANAGER-demo-",
+      demo: "https://ricoh-printer-manager-demo.vercel.app/",
+      featured: true,
     },
     {
-      title: 'VALIDADOR DE CENSO',
-      description: 'Sistema de validación y carga de datos comerciales que asegura la calidad y consistencia de la información de clientes antes de integrarla al ERP corporativo.',
-      technologies: ['React', 'API REST','CSS'],
-      image: <FaPersonCirclePlus />,
-      github: 'https://github.com/fede1817/VALIDADOR-DE-CENSO',
-      demo: 'https://validador-de-censo.vercel.app/',
-      featured: true
+      title: "VALIDADOR DE CENSO",
+      description:
+        "Sistema de validación y carga de datos comerciales que asegura la calidad y consistencia de la información de clientes antes de integrarla al ERP y SAP corporativo.",
+      technologies: ["React", "API REST", "CSS"],
+      thumbnail: "/images/projects/validador-censo-thumb.jpg",
+      github: "https://github.com/fede1817/VALIDADOR-DE-CENSO",
+      demo: "https://validador-de-censo.vercel.app/",
+      featured: true,
     },
     {
-      title: 'SISTEMA DE RASTREO DE TELEFONOS CORPORATIVOS',
-      description: 'Aplicación web para monitoreo en tiempo real de dispositivos móviles de una empresa, mostrando su ubicación, estado y datos técnicos.',
-      technologies: ['React + Vite', 'API REST', 'tailwindcss'],
-      image: '📊',
-      github: 'https://github.com/fede1817/CELL-MANAGER',
-      demo: 'https://cell-manager-iota.vercel.app/',
-      featured: false
+      title: "SISTEMA DE RASTREO DE TELEFONOS CORPORATIVOS",
+      description:
+        "Aplicación web para monitoreo en tiempo real de dispositivos móviles de una empresa, mostrando su ubicación, estado y datos técnicos.",
+      technologies: ["React + Vite", "API REST", "tailwindcss"],
+      image: "/images/projects/cell-manager.jpg",
+      thumbnail: "/images/projects/cell-manager-thumb.jpg",
+      github: "https://github.com/fede1817/CELL-MANAGER",
+      demo: "https://cell-manager-iota.vercel.app/",
+      featured: true,
     },
-    {
-      title: 'Red Social Educativa',
-      description: 'Plataforma social para estudiantes y educadores con foros y recursos compartidos.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-      image: '👥',
-      github: '#',
-      demo: '#',
-      featured: false
-    }
   ];
 
   return (
@@ -50,7 +42,8 @@ const Projects = () => {
           Mis <span className="gradient-text">Proyectos</span>
         </h2>
         <p className="text-gray-400 text-center text-lg mb-16 max-w-2xl mx-auto">
-          Algunos de los proyectos donde he aplicado mis habilidades en desarrollo y soluciones empresariales
+          Algunos de los proyectos donde he aplicado mis habilidades en
+          desarrollo y soluciones empresariales
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -58,65 +51,94 @@ const Projects = () => {
             <div
               key={index}
               className={`bg-gray-800 rounded-2xl overflow-hidden shadow-2xl card-hover border border-gray-700 ${
-                project.featured ? 'lg:col-span-2' : ''
+                project.featured ? "lg:col-span-2" : ""
               }`}
             >
-              <div className="flex flex-col md:flex-row">
-                {/* Project Image */}
-                <div className={`p-8 flex items-center justify-center ${
-                  project.featured ? 'md:w-1/3' : 'md:w-2/5'
-                }`}>
-                  <div className="text-8xl">
-                    {project.image}
+              <div className="flex flex-col md:flex-row h-full">
+                {/* Project Image - Miniatura */}
+                <div
+                  className={`relative group overflow-hidden ${
+                    project.featured ? "md:w-2/5" : "md:w-2/5"
+                  }`}
+                >
+                  <img
+                    src={project.thumbnail || project.image}
+                    alt={project.title}
+                    className="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  {/* Overlay con efecto hover */}
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-opacity-100 transition-all"
+                      >
+                        Ver Demo
+                      </a>
+                    </div>
                   </div>
+
+                  {/* Badge destacado en imagen */}
+                  {project.featured && (
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-gradient-to-r from-primary to-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Destacado
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Project Content */}
-                <div className={`p-8 ${
-                  project.featured ? 'md:w-2/3' : 'md:w-3/5'
-                }`}>
-                  {project.featured && (
-                    <span className="inline-block bg-gradient-to-r from-primary to-accent text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
-                      Proyecto Destacado
-                    </span>
-                  )}
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-6">
-                    {project.description}
-                  </p>
+                <div
+                  className={`p-6 flex flex-col justify-between ${
+                    project.featured ? "md:w-3/5" : "md:w-3/5"
+                  }`}
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3">
+                      {project.title}
+                    </h3>
 
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="bg-gray-700 px-3 py-1 rounded-full text-sm font-medium text-gray-300 border border-gray-600"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                    <p className="text-gray-300 mb-4 line-clamp-3">
+                      {project.description}
+                    </p>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="bg-gray-700 px-3 py-1 rounded-full text-sm font-medium text-gray-300 border border-gray-600"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Links */}
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 pt-4 border-t border-gray-700">
                     <a
                       href={project.github}
-                      className="flex items-center gap-2 text-gray-300 hover:text-primary transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-300 hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-gray-700"
                     >
                       <i className="fab fa-github"></i>
                       <span>Código</span>
                     </a>
                     <a
                       href={project.demo}
-                      className="flex items-center gap-2 text-gray-300 hover:text-accent transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-300 hover:text-accent transition-colors px-4 py-2 rounded-lg hover:bg-gray-700"
                     >
                       <i className="fas fa-external-link-alt"></i>
-                      <span>Demo</span>
+                      <span>Demo Live</span>
                     </a>
+                    {/* Botón para ver más imágenes (opcional) */}
                   </div>
                 </div>
               </div>
@@ -124,23 +146,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <p className="text-gray-400 text-lg mb-6">
-            ¿Interesado en ver más proyectos?
-          </p>
-          <a
-            href="https://github.com/fede1817"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
-          >
-            <i className="fab fa-github"></i>
-            Ver más en GitHub
-          </a>
-        </div>
-
-        {/* Sección adicional */}
+        {/* Sección de metodología */}
         <div className="mt-16 bg-gray-800 rounded-2xl p-8 border border-gray-700">
           <h3 className="text-2xl font-bold text-white text-center mb-6">
             Metodología de Trabajo
@@ -151,14 +157,18 @@ const Projects = () => {
                 <i className="fas fa-lightbulb text-white text-xl"></i>
               </div>
               <h4 className="text-lg font-bold text-white mb-2">Análisis</h4>
-              <p className="text-gray-300">Estudio de requisitos y planificación</p>
+              <p className="text-gray-300">
+                Estudio de requisitos y planificación
+              </p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-code text-white text-xl"></i>
               </div>
               <h4 className="text-lg font-bold text-white mb-2">Desarrollo</h4>
-              <p className="text-gray-300">Implementación con mejores prácticas</p>
+              <p className="text-gray-300">
+                Implementación con mejores prácticas
+              </p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
