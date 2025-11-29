@@ -149,7 +149,7 @@ const Contact = () => {
       icon: "fab fa-linkedin",
       title: "LinkedIn",
       value: "linkedin.com/in/tuusuario",
-      link: "https://linkedin.com/in/tuusuario",
+      link: "https://www.linkedin.com/in/fede-britez-947b28196/",
       action: null,
       copyable: false,
     },

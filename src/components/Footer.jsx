@@ -9,7 +9,7 @@ const Footer = () => {
     },
     {
       icon: "fab fa-linkedin",
-      url: "https://linkedin.com/in/tuusuario",
+      url: "https://www.linkedin.com/in/fede-britez-947b28196/",
       label: "LinkedIn",
     },
     {
