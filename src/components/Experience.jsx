@@ -15,7 +15,7 @@ const Experience = () => {
         "Implementación de APIs REST para integración con sistemas existentes",
         "Soporte al usuario final",
         "Help desk a travez de tickets",
-        "Modificaciones de cartera de cliente, vendedores, gestion de invetario entre otros procesos a travez de SAP",
+        "Modificaciones de cartera de cliente, vendedores, gestion de inventario entre otros procesos a travez de SAP",
         "Reportes BI",
       ],
       technologies: [
