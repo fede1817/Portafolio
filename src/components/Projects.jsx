@@ -33,6 +33,18 @@ const Projects = () => {
       demo: "https://cell-manager-iota.vercel.app/",
       featured: true,
     },
+     {
+      title: "SISTEMA DE VISUALIZACIÓN DE RUTAS DE VENDEDORES",
+      description:
+        "Aplicación web enfocada en supervisores de venta para visualizar rutas de vendedores en tiempo real, mostrando su ubicación, estado y datos técnicos.",
+      technologies: ["React + Vite", "API REST", "CSS"],
+      image: "/images/projects/route-viewer.jpg",
+      thumbnail: "/images/projects/route-viewer-thumb.jpg",
+      github: "https://github.com/fede1817/clientes-app",
+      demo: "https://clientes-app-ashen.vercel.app/",
+      featured: true,
+    },
+
   ];
 
   return (
